@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Carbonara's — Sabor Artesanal | Pizzería en Siguatepeque</title>
+<meta name="description" content="Carbonara's Sabor Artesanal: pizzas artesanales al horno de leña, pastas, hamburguesas y alitas en Siguatepeque, Comayagua. Mira el menú completo y pide ya." />
+<meta name="theme-color" content="#131313" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Carbonara's — Sabor Artesanal" />
+<meta property="og:description" content="Pizzas artesanales al horno de leña, pastas y más en Siguatepeque, Honduras." />
+<meta property="og:image" content="img/pizzapeperoni.jpg" />
+<meta property="og:type" content="website" />
+
+<link rel="icon" href="img/carbonaras.png" type="image/png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL@20..48,100..700,0..1&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Carbonara's Sabor Artesanal",
+  "image": "img/carbonaras.png",
+  "servesCuisine": ["Pizza", "Italiana", "Comida rápida"],
+  "priceRange": "L 43 - L 559",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5ta Avenida N.O.",
+    "addressLocality": "Siguatepeque",
+    "addressRegion": "Comayagua",
+    "addressCountry": "HN"
+  },
+  "sameAs": ["https://www.facebook.com/profile.php?id=100064025676481"]
+}
+</script>
+</head>
+<body class="antialiased">
+
+<a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-[#800020] focus:text-[#f5f0e8] focus:px-4 focus:py-2 focus:rounded">Saltar al contenido</a>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="navbar" class="fixed top-0 w-full z-50 border-b border-[rgba(88,65,65,0.25)]">
+  <div class="flex justify-between items-center px-4 md:px-12 py-3 max-w-[1280px] mx-auto">
+    <a href="#inicio" class="flex items-center gap-3 shrink-0">
+      <span class="logo-badge inline-flex"><img src="img/carbonaras.png" alt="Carbonara's Sabor Artesanal" class="h-10 w-10 object-contain rounded-full" /></span>
+      <span class="font-display text-[#ffb3b5] hidden sm:block tracking-widest uppercase text-lg font-bold">Carbonara's</span>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="#inicio" class="nav-link active text-[#e5e2e1] text-sm font-bold uppercase tracking-wider font-body">Inicio</a>
+      <a href="#menu" class="nav-link text-[#e5e2e1] text-sm font-bold uppercase tracking-wider font-body">Menú</a>
+      <a href="#nosotros" class="nav-link text-[#e5e2e1] text-sm font-bold uppercase tracking-wider font-body">Nosotros</a>
+      <a href="#galeria" class="nav-link text-[#e5e2e1] text-sm font-bold uppercase tracking-wider font-body">Galería</a>
+      <a href="#ubicacion" class="nav-link text-[#e5e2e1] text-sm font-bold uppercase tracking-wider font-body">Ubicación</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="https://www.facebook.com/profile.php?id=100064025676481" target="_blank" rel="noopener" class="btn-primary hidden sm:inline-flex">
+        <span class="material-symbols-outlined text-[18px]">chat</span>
+        Pedir ahora
+      </a>
+      <button id="menuToggle" aria-label="Abrir menú" aria-expanded="false" class="lg:hidden text-[#e5e2e1] p-2 rounded hover:bg-white/5">
+        <span id="iconMenu" class="material-symbols-outlined text-3xl">menu</span>
+        <span id="iconClose" class="material-symbols-outlined text-3xl hidden">close</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobileMenu" class="lg:hidden bg-[#0e0e0e] border-t border-[rgba(88,65,65,0.25)]">
+    <div class="flex flex-col px-6 py-4 gap-4">
+      <a href="#inicio" class="text-[#e5e2e1] font-body font-bold uppercase text-sm tracking-wider">Inicio</a>
+      <a href="#menu" class="text-[#e5e2e1] font-body font-bold uppercase text-sm tracking-wider">Menú</a>
+      <a href="#nosotros" class="text-[#e5e2e1] font-body font-bold uppercase text-sm tracking-wider">Nosotros</a>
+      <a href="#galeria" class="text-[#e5e2e1] font-body font-bold uppercase text-sm tracking-wider">Galería</a>
+      <a href="#ubicacion" class="text-[#e5e2e1] font-body font-bold uppercase text-sm tracking-wider">Ubicación</a>
+      <a href="https://www.facebook.com/profile.php?id=100064025676481" target="_blank" rel="noopener" class="btn-primary w-full mt-2">
+        <span class="material-symbols-outlined text-[18px]">chat</span> Pedir ahora
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section id="inicio" class="relative min-h-screen flex items-center justify-center">
+  <div class="absolute inset-0 w-full h-full">
+    <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-[rgba(19,19,19,0.55)] to-[rgba(19,19,19,0.35)] z-10"></div>
+    <img src="img/pizzapeperoni.jpg" alt="Pizza de pepperoni recién horneada de Carbonara's" class="w-full h-full object-cover" loading="eager" />
+  </div>
+
+  <div class="relative z-20 text-center px-4 max-w-3xl mx-auto pt-24">
+    <span class="eyebrow reveal block mb-5">Tradición &amp; horno de leña · Siguatepeque</span>
+    <h1 class="font-display text-[2.6rem] leading-[1.05] sm:text-6xl sm:leading-[1.05] text-[#f5f0e8] mb-6 font-bold reveal reveal-delay-1">
+      Sabor artesanal,<br class="hidden sm:block" /> horneado con fuego real
+    </h1>
+    <p class="font-body text-[#e0bfbf] text-base sm:text-lg mb-10 max-w-xl mx-auto reveal reveal-delay-2">
+      Pizzas de masa artesanal, pastas caseras, hamburguesas y alitas — preparadas al momento con ingredientes frescos.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal reveal-delay-3">
+      <a href="#menu" class="btn-primary w-full sm:w-auto">Ver el menú</a>
+      <a href="https://www.facebook.com/profile.php?id=100064025676481" target="_blank" rel="noopener" class="btn-secondary w-full sm:w-auto">
+        <span class="material-symbols-outlined text-[18px]">thumb_up</span> Síguenos en Facebook
+      </a>
+    </div>
+  </div>
+
+  <a href="#menu" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 text-[#e0bfbf] hover:text-[#e9c349] transition-colors hidden md:block float-slow" aria-label="Ir al menú">
+    <span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+  </a>
+</section>
+
+<!-- ============ MENU ============ -->
+<section id="menu" class="py-20 md:py-28 px-4 md:px-12 bg-[#131313]">
+  <div class="max-w-[1280px] mx-auto">
+
+    <div class="text-center mb-4 reveal">
+      <span class="eyebrow block mb-3">Nuestra selección</span>
+      <h2 class="font-display text-3xl sm:text-4xl md:text-5xl text-[#f5f0e8] font-bold">Menú</h2>
+      <div class="divider-flourish mt-6"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+    </div>
+    <p class="text-center text-[#e0bfbf] font-body max-w-xl mx-auto mb-12 reveal">Precios en Lempiras (L). Todas las pizzas están disponibles en 14" y 18".</p>
+
+    <!-- Tabs -->
+    <div class="flex gap-3 overflow-x-auto pb-3 mb-10 no-scrollbar justify-start md:justify-center reveal" role="tablist">
+      <button class="menu-tab active" data-target="panel-artesanales">Pizzas Artesanales</button>
+      <button class="menu-tab" data-target="panel-tradicionales">Pizzas Tradicionales</button>
+      <button class="menu-tab" data-target="panel-entradas">Entradas</button>
+      <button class="menu-tab" data-target="panel-alitas">Alitas</button>
+      <button class="menu-tab" data-target="panel-pastas">Pastas</button>
+      <button class="menu-tab" data-target="panel-hamburguesas">Hamburguesas</button>
+      <button class="menu-tab" data-target="panel-ensalada">Ensalada</button>
+    </div>
+
+    <!-- Pizzas Artesanales -->
+    <div id="panel-artesanales" class="menu-panel active">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-52"><img src="img/pizzacarbonara.jpg" alt="Pizza Carbonara con tocino y arúgula" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start gap-2 mb-2"><h3 class="font-display text-lg text-[#f5f0e8] font-bold">Pizza Carbonar</h3></div>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Mozzarella, tocino y arúgula sobre la tradicional salsa carbonara.</p>
+            <span class="price-pill">L 289 · 14" &nbsp;/&nbsp; L 419 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/pizzabolonesa.jpg" alt="Pizza Boloñesa con albahaca" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Boloñesa</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Salsa boloñesa cocida a fuego lento, mozzarella y un toque de albahaca fresca.</p>
+            <span class="price-pill">L 289 · 14" &nbsp;/&nbsp; L 419 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/pizzapollocheddar.jpg" alt="Pizza Pollo Cheddar" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Pollo Cheddar</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Base de pollo a la plancha y queso cheddar, mozzarella y un toque de albahaca.</p>
+            <span class="price-pill">L 289 · 14" &nbsp;/&nbsp; L 419 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-3">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/pizzacapresse.jpg" alt="Pizza Capresse con tomate y albahaca" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Capresse</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Salsa de tomate de la casa, mozzarella, tomate fresco, albahaca, orégano y aceite de oliva.</p>
+            <span class="price-pill">L 249 · 14" &nbsp;/&nbsp; L 369 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/4estaciones.jpg" alt="Pizza 4 Estaciones especializada" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza 4 Estaciones</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Cuatro especialidades en una: capresse, boloñesa, carbonara y pepperoni artesanal.</p>
+            <span class="price-pill">L 369 · 14" &nbsp;/&nbsp; L 499 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-img-wrap h-52"><img src="img/pizzaconhongos.jpg" alt="Pizza vegetariana con hongos y vegetales" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Pepperoni Artesanal</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Salsa de tomate de la casa, mozzarella, pepperoni, albahaca, orégano y aceite de oliva.</p>
+            <span class="price-pill">L 249 · 14" &nbsp;/&nbsp; L 369 · 18"</span>
+          </div>
+        </div>
+
+        <div class="dish-card reveal reveal-delay-2 sm:col-span-2 lg:col-span-2">
+          <div class="dish-img-wrap h-52"><img src="img/pizzadeluxe.jpg" alt="Pizza cargada con jamón, tocino y champiñones" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Romana</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Mozzarella, salsa de tomate de la casa, champiñones, jamón serrano, aceitunas negras y parmesano sobre albahaca fresca.</p>
+            <span class="price-pill">L 399 · 14" &nbsp;/&nbsp; L 499 · 18"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 md:p-8 reveal max-w-xl">
+        <h4 class="font-display text-xl text-[#e9c349] mb-2">También en Artesanales</h4>
+        <div class="list-row flex justify-between items-start py-3 gap-4">
+          <div><p class="font-body font-semibold text-[#f5f0e8]">Pizza 4 quesos</p><p class="text-xs text-[#a89d9d] font-body">Salsa de tomate, cheddar, pecorino y parmesano con un toque de arúgula fresca.</p></div>
+          <span class="price-pill">L 289 / L 369</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pizzas Tradicionales -->
+    <div id="panel-tradicionales" class="menu-panel">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-52"><img src="img/pizzadeluxe.jpg" alt="Pizza Carnívora con jamón, tocino, chorizo y carne" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Carnívora</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Tocino, champiñones, jamón, chorizo español, pepperoni y carne de res sobre pasta gruesa.</p>
+            <span class="price-pill">L 369 · 14" &nbsp;/&nbsp; L 438 · 18"</span>
+          </div>
+        </div>
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-img-wrap h-52"><img src="img/pizzaconhongos.jpg" alt="Pizza armada al gusto con vegetales" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza Suprema</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Jamón, salchicha italiana, pepperoni, aceitunas negras, chile dulce, tomate y cebolla.</p>
+            <span class="price-pill">L 369 · 14" &nbsp;/&nbsp; L 499 · 18"</span>
+          </div>
+        </div>
+        <div class="dish-card reveal reveal-delay-2">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/4estaciones.jpg" alt="Pizza 4 Estaciones clásica" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Pizza 4 Estaciones Clásica</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Caprese, boloñesa, champiñones y pepperoni con aceitunas, chile dulce, tomate y cebolla.</p>
+            <span class="price-pill">L 299 · 14" &nbsp;/&nbsp; L 499 · 18"</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 md:p-8 reveal">
+        <h4 class="font-display text-xl text-[#e9c349] mb-4">Arma la tuya</h4>
+        <div class="grid sm:grid-cols-2 gap-x-10">
+          <div class="list-row py-3">
+            <div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">Pizza clásica (1 ingrediente)</p><span class="price-pill">L 189</span></div>
+          </div>
+          <div class="list-row py-3">
+            <div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">Clásica pepperoni o jamón · 12" (solo para llevar)</p><span class="price-pill">L 119</span></div>
+          </div>
+          <div class="list-row py-3">
+            <div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">Clásica pepperoni o jamón</p><span class="price-pill">L 179 / L 359</span></div>
+          </div>
+          <div class="list-row py-3">
+            <div><div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">2 ingredientes a elección</p><span class="price-pill">L 219 / L 389</span></div><p class="text-xs text-[#a89d9d] font-body mt-1">Jamón, pepperoni, tocino, chorizo español, salchicha italiana, champiñones, piña, vegetales o aceitunas negras.</p></div>
+          </div>
+          <div class="list-row py-3">
+            <div><div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">Ármala a tu gusto · 3 ingredientes</p><span class="price-pill">L 269 / L 429</span></div></div>
+          </div>
+          <div class="list-row py-3">
+            <div><div class="flex justify-between items-start gap-4"><p class="font-body font-semibold text-[#f5f0e8]">Clásica de res o pollo · 14"</p><span class="price-pill">L 219 / L 379</span></div><p class="text-xs text-[#a89d9d] font-body mt-1">1 ingrediente + salsa, mozzarella y res o pollo.</p></div>
+          </div>
+        </div>
+        <p class="text-xs text-[#a89d9d] font-body mt-6 pt-4 border-t border-[rgba(88,65,65,0.25)]">Extras — Queso mozzarella: L 50 / L 100 &nbsp;·&nbsp; Orilla de queso mozzarella: L 50 / L 100</p>
+      </div>
+    </div>
+
+    <!-- Entradas -->
+    <div id="panel-entradas" class="menu-panel">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-56"><img src="img/cropped/panconajo.jpg" alt="Pan con ajo gratinado" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start gap-4"><h3 class="font-display text-lg text-[#f5f0e8] font-bold">Orden de pan con ajo</h3><span class="price-pill">L 143</span></div>
+            <p class="text-sm text-[#c8c2c2] font-body mt-2">3 rebanadas de pan cubiertas de mantequilla con ajo y queso mozzarella gratinado.</p>
+          </div>
+        </div>
+        <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 md:p-8 reveal reveal-delay-1">
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Jalapeños rellenos</p><p class="text-xs text-[#a89d9d] font-body">9 chiles con queso cheddar y crema, jalea de chiles morrones.</p></div><span class="price-pill">L 199</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Crostinis</p><p class="text-xs text-[#a89d9d] font-body">6 crostinis con crema de quesos, jamón serrano y balsámico.</p></div><span class="price-pill">L 199</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Aros de cebolla</p><p class="text-xs text-[#a89d9d] font-body">6 unidades con 2 aderezos de la casa.</p></div><span class="price-pill">L 79</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Mozzarella steak</p><p class="text-xs text-[#a89d9d] font-body">6 dedos de mozzarella con 2 aderezos de la casa.</p></div><span class="price-pill">L 99</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Mozzarella steak + Aros de cebolla</p></div><span class="price-pill">L 159</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Chicken fingers</p><p class="text-xs text-[#a89d9d] font-body">6 dedos de pollo + papas fritas, salsa barbacoa y aderezo de la casa.</p></div><span class="price-pill">L 189</span></div></div>
+          <div class="list-row py-3"><div class="flex justify-between items-start gap-4"><div><p class="font-body font-semibold text-[#f5f0e8]">Papas locas</p><p class="text-xs text-[#a89d9d] font-body">Papas fritas con chorizo, carne y 4 tipos de aderezos.</p></div><span class="price-pill">L 199</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alitas -->
+    <div id="panel-alitas" class="menu-panel">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-72"><img src="img/alitasHD.jpg" alt="Alitas bañadas en salsa" class="w-full h-full object-cover" loading="lazy" /></div>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 md:p-8">
+            <div class="list-row py-3 flex justify-between"><p class="font-body font-semibold text-[#f5f0e8]">Orden de 6 alitas</p><span class="price-pill">L 189</span></div>
+            <div class="list-row py-3 flex justify-between"><p class="font-body font-semibold text-[#f5f0e8]">Orden de 9 alitas</p><span class="price-pill">L 239</span></div>
+            <div class="list-row py-3 flex justify-between"><p class="font-body font-semibold text-[#f5f0e8]">Orden de 12 alitas</p><span class="price-pill">L 329</span></div>
+            <div class="list-row py-3 flex justify-between"><p class="font-body font-semibold text-[#f5f0e8]">Orden de 18 alitas</p><span class="price-pill">L 439</span></div>
+            <div class="list-row py-3 flex justify-between"><p class="font-body font-semibold text-[#f5f0e8]">Orden de 24 alitas</p><span class="price-pill">L 559</span></div>
+          </div>
+          <p class="text-sm text-[#c8c2c2] font-body mt-5">Acompañadas de papas fritas, aderezo de la casa, apio y zanahoria.</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="text-xs uppercase tracking-wider font-bold text-[#e9c349] border border-[#e9c349]/40 rounded-full px-3 py-1">Maracuyá habanero</span>
+            <span class="text-xs uppercase tracking-wider font-bold text-[#e9c349] border border-[#e9c349]/40 rounded-full px-3 py-1">BBQ</span>
+            <span class="text-xs uppercase tracking-wider font-bold text-[#e9c349] border border-[#e9c349]/40 rounded-full px-3 py-1">Chipotle y miel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pastas -->
+    <div id="panel-pastas" class="menu-panel">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-56"><img src="img/Panconpasta.jpg" alt="Linguini en salsa Carbonara con pan de ajo" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start gap-4"><h3 class="font-display text-lg text-[#f5f0e8] font-bold">Linguini en salsa Carbonara</h3><span class="price-pill">L 279</span></div>
+            <p class="text-sm text-[#c8c2c2] font-body mt-2">Pasta linguine en salsa carbonara con queso parmesano y tocino, acompañada de dos piezas de pan con ajo y mozzarella.</p>
+          </div>
+        </div>
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-img-wrap h-56"><img src="img/cropped/lasagna.jpg" alt="Rollos de lasagna a la boloñesa" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <div class="flex justify-between items-start gap-4"><h3 class="font-display text-lg text-[#f5f0e8] font-bold">Rollos de lasagna a la boloñesa</h3></div>
+            <p class="text-sm text-[#c8c2c2] font-body mt-2 mb-3">Pasta enrollada con carne en salsa boloñesa, queso mozzarella y albahaca, con dos piezas de pan con ajo.</p>
+            <span class="price-pill">L 259 · 2 rollos &nbsp;/&nbsp; L 289 · 3 rollos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hamburguesas -->
+    <div id="panel-hamburguesas" class="menu-panel">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="dish-card reveal">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/hamburguesa.jpg" alt="Hamburguesa clásica con papas fritas" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Hamburguesa clásica</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Carne de res (4 oz), aderezo de la casa, tomate, lechuga y queso cheddar, con papas fritas.</p>
+            <span class="price-pill">L 199</span>
+          </div>
+        </div>
+        <div class="dish-card reveal reveal-delay-1">
+          <div class="dish-img-wrap h-52"><img src="img/cropped/hamburguesatop.jpg" alt="Hamburguesa especial Carbonara's con tocino" class="w-full h-full object-cover" loading="lazy" /></div>
+          <div class="p-5">
+            <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Hamburguesa especial Carbonara's</h3>
+            <p class="text-sm text-[#c8c2c2] font-body mb-3">Carne de res (6 oz), aderezo de la casa y queso cheddar.</p>
+            <span class="price-pill">L 249</span>
+          </div>
+        </div>
+        <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 flex flex-col justify-center reveal reveal-delay-2">
+          <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Sándwich de pollo Carbonara's</h3>
+          <p class="text-sm text-[#c8c2c2] font-body mb-3">Filete de pollo 100% empanizado, aderezo de la casa, tomate y queso cheddar, con papas fritas.</p>
+          <span class="price-pill">L 209</span>
+        </div>
+        <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 flex flex-col justify-center reveal reveal-delay-3">
+          <h3 class="font-display text-lg text-[#f5f0e8] font-bold mb-2">Club Sándwich</h3>
+          <p class="text-sm text-[#c8c2c2] font-body mb-3">Filete de pollo, jamón cubano, queso cheddar, lechuga fresca y tomate, con papas fritas.</p>
+          <span class="price-pill">L 199</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ensalada -->
+    <div id="panel-ensalada" class="menu-panel">
+      <div class="max-w-xl mx-auto">
+        <div class="bg-[#1c1b1b] border border-[rgba(88,65,65,0.3)] rounded-lg p-6 md:p-8 reveal">
+          <div class="flex justify-between items-start gap-4 mb-3">
+            <h3 class="font-display text-xl text-[#f5f0e8] font-bold">Ensalada Carbonar's</h3>
+            <span class="price-pill">L 249</span>
+          </div>
+          <p class="text-sm text-[#c8c2c2] font-body">Lechuga fresca, cebolla morada, tomate, aceitunas negras, queso feta, zanahoria, nueces y 6 oz de filete de pollo, con aceite de oliva y vinagreta de fresa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center reveal">
+      <p class="text-[#a89d9d] font-body text-sm mb-5">¿Prefieres ver el menú tal como está en el restaurante?</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button data-lightbox="img/menucompleto2.png" data-caption="Menú de Pizzas — Carbonara's" class="btn-secondary">Ver menú de pizzas</button>
+        <button data-lightbox="img/menumascompleto.png" data-caption="Menú completo — Carbonara's" class="btn-secondary">Ver menú completo</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section id="nosotros" class="py-20 md:py-28 px-4 md:px-12 bg-[#1c1b1b] border-y border-[rgba(88,65,65,0.2)]">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center gap-14">
+    <div class="md:w-1/2 reveal">
+      <span class="eyebrow block mb-4">Nuestra historia</span>
+      <h2 class="font-display text-3xl sm:text-4xl text-[#f5f0e8] font-bold mb-6">Cocina con corazón,<br />horneada con fuego</h2>
+      <p class="font-body text-[#c8c2c2] mb-5 leading-relaxed">
+        En Carbonara's creemos que la verdadera magia ocurre cuando se combinan ingredientes frescos, técnica artesanal y el calor reconfortante del fuego real. Cada masa se estira a mano, cada salsa se cocina lento, y cada plato sale de la cocina con el mismo cuidado con el que se prepararía en casa.
+      </p>
+      <p class="font-body text-[#c8c2c2] mb-8 leading-relaxed">
+        Desde nuestras pizzas artesanales hasta las pastas, alitas y hamburguesas del menú, cada detalle está pensado para ofrecerte una experiencia auténtica en Siguatepeque.
+      </p>
+      <div class="flex items-center gap-6 flex-wrap">
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-[#e9c349] text-4xl flame">local_fire_department</span>
+          <span class="text-xs uppercase tracking-wider font-bold font-body">Horno artesanal</span>
+        </div>
+        <div class="h-12 w-px bg-[rgba(88,65,65,0.3)]"></div>
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-[#e9c349] text-4xl">eco</span>
+          <span class="text-xs uppercase tracking-wider font-bold font-body">Ingredientes frescos</span>
+        </div>
+        <div class="h-12 w-px bg-[rgba(88,65,65,0.3)]"></div>
+        <div class="flex flex-col items-center gap-2">
+          <span class="material-symbols-outlined text-[#e9c349] text-4xl">handshake</span>
+          <span class="text-xs uppercase tracking-wider font-bold font-body">Hecho a mano</span>
+        </div>
+      </div>
+    </div>
+    <div class="md:w-1/2 relative reveal reveal-delay-2">
+      <div class="absolute inset-0 bg-[#800020]/25 rounded-lg translate-x-4 translate-y-4"></div>
+      <img src="img/hombreamazando.jpg" alt="Chef de Carbonara's amasando la masa artesanal" class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[460px]" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA ============ -->
+<section id="galeria" class="py-20 md:py-28 px-4 md:px-12 bg-[#131313]">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="text-center mb-14 reveal">
+      <span class="eyebrow block mb-3">Instagram &amp; Facebook</span>
+      <h2 class="font-display text-3xl sm:text-4xl text-[#f5f0e8] font-bold">De nuestra cocina</h2>
+      <div class="divider-flourish mt-6"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+      <div class="gallery-item md:col-span-2 md:row-span-2 rounded reveal" data-lightbox="img/pizzadeluxe.jpg" data-caption="Pizza cargada, recién salida del horno">
+        <img src="img/pizzadeluxe.jpg" alt="Pizza artesanal recién horneada" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="gallery-item rounded reveal reveal-delay-1" data-lightbox="img/cropped/lasagnabolonesa.jpg" data-caption="Lasagna Boloñesa">
+        <img src="img/cropped/lasagnabolonesa.jpg" alt="Lasagna boloñesa gratinada" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="gallery-item rounded reveal reveal-delay-2" data-lightbox="img/cropped/hamburguesatop.jpg" data-caption="Hamburguesa especial Carbonara's">
+        <img src="img/cropped/hamburguesatop.jpg" alt="Hamburguesa con tocino y papas fritas" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div class="gallery-item md:col-span-2 rounded reveal reveal-delay-3" data-lightbox="img/alitasHD.jpg" data-caption="Alitas bañadas en salsa">
+        <img src="img/alitasHD.jpg" alt="Alitas bañadas en salsa" class="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UBICACION / CONTACTO ============ -->
+<section id="ubicacion" class="py-20 md:py-28 px-4 md:px-12 bg-[#1c1b1b] border-t border-[rgba(88,65,65,0.2)]">
+  <div class="max-w-[1280px] mx-auto">
+    <div class="text-center mb-14 reveal">
+      <span class="eyebrow block mb-3">Visítanos</span>
+      <h2 class="font-display text-3xl sm:text-4xl text-[#f5f0e8] font-bold">Ubicación &amp; contacto</h2>
+      <div class="divider-flourish mt-6"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+    </div>
+
+    <div class="flex flex-col md:flex-row gap-0 bg-[#131313] rounded-xl overflow-hidden shadow-2xl border border-[rgba(88,65,65,0.3)] reveal">
+      <div class="md:w-1/3 p-8 md:p-10 flex flex-col justify-between">
+        <div>
+          <h3 class="font-display text-xl text-[#f5f0e8] font-bold mb-8 flex items-center gap-3">
+            <span class="material-symbols-outlined text-[#e9c349]">location_on</span>
+            Encuéntranos
+          </h3>
+          <div class="space-y-6">
+            <div>
+              <span class="eyebrow block mb-1">Dirección</span>
+              <p class="font-body text-[#e5e2e1]">5ta Avenida N.O.<br />Siguatepeque, Comayagua, Honduras</p>
+            </div>
+            <div>
+              <span class="eyebrow block mb-1">Horarios &amp; pedidos</span>
+              <p class="font-body text-[#c8c2c2] text-sm">Los horarios pueden variar — confirma disponibilidad y toma tu pedido directamente por nuestra página de Facebook.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <a href="https://www.facebook.com/profile.php?id=100064025676481" target="_blank" rel="noopener" class="btn-primary w-full">
+            <span class="material-symbols-outlined text-[18px]">thumb_up</span> Contactar por Facebook
+          </a>
+        </div>
+      </div>
+
+      <div class="md:w-2/3 min-h-[360px] md:min-h-[440px] relative bg-[#2a2a2a]">
+        <iframe
+          title="Mapa de ubicación de Carbonara's en Siguatepeque"
+          class="absolute inset-0 w-full h-full grayscale-[40%] contrast-[1.05]"
+          style="border:0"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=5ta+Avenida+N.O.,+Siguatepeque,+Comayagua,+Honduras&output=embed">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="w-full py-12 bg-[#0e0e0e] border-t border-[#800020]/20 px-4 md:px-12">
+  <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+    <div class="flex flex-col items-center md:items-start gap-3">
+      <a href="#inicio" class="flex items-center gap-3 opacity-90 hover:opacity-100 transition-opacity">
+        <span class="logo-badge inline-flex"><img src="img/carbonaras.png" alt="Carbonara's" class="h-9 w-9 object-contain rounded-full" /></span>
+        <span class="font-display text-[#ffb3b5] tracking-widest uppercase font-bold">Carbonara's</span>
+      </a>
+      <p class="text-xs text-[#a89d9d] font-body">© <span id="year">2026</span> Carbonara's — Sabor Artesanal. Siguatepeque, Honduras.</p>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8 font-body text-sm text-[#c8c2c2]">
+      <a href="#menu" class="hover:text-[#e9c349] transition-colors">Menú</a>
+      <a href="#nosotros" class="hover:text-[#e9c349] transition-colors">Nosotros</a>
+      <a href="#ubicacion" class="hover:text-[#e9c349] transition-colors">Ubicación</a>
+    </div>
+
+    <div class="flex gap-3">
+      <a href="https://www.facebook.com/profile.php?id=100064025676481" target="_blank" rel="noopener" aria-label="Facebook de Carbonara's" class="w-10 h-10 rounded-full bg-[#1c1b1b] flex items-center justify-center text-[#c8c2c2] hover:text-[#e9c349] hover:bg-[#2a2a2a] transition-all">
+        <span class="material-symbols-outlined text-[20px]">thumb_up</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox" class="hidden hidden-lb fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 md:p-10">
+  <button id="lightboxClose" aria-label="Cerrar" class="absolute top-5 right-5 text-white/80 hover:text-white z-10">
+    <span class="material-symbols-outlined text-4xl">close</span>
+  </button>
+  <figure class="max-w-4xl w-full text-center">
+    <img id="lightboxImg" src="" alt="" class="max-h-[80vh] w-auto mx-auto rounded shadow-2xl" />
+    <figcaption id="lightboxCaption" class="text-[#e0bfbf] font-body text-sm mt-4"></figcaption>
+  </figure>
+</div>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" aria-label="Volver arriba" class="hide-btn fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-[#800020] text-[#f5f0e8] shadow-lg flex items-center justify-center hover:bg-[#931026]">
+  <span class="material-symbols-outlined">arrow_upward</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

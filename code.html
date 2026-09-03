@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carbonara's - Sabor Artesanal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#c8c8b0",
+                        "on-tertiary-fixed-variant": "#474836",
+                        "surface": "#131313",
+                        "background": "#131313",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed": "#e4e4cc",
+                        "on-primary": "#680018",
+                        "inverse-primary": "#af2b3e",
+                        "secondary-fixed": "#ffe088",
+                        "primary": "#ffb3b5",
+                        "outline": "#a78a8a",
+                        "on-tertiary-container": "#a9aa94",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#ff828a",
+                        "surface-container": "#201f1f",
+                        "primary-fixed-dim": "#ffb3b5",
+                        "on-secondary-fixed-variant": "#574500",
+                        "tertiary-container": "#3d3f2d",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#40000b",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary": "#3c2f00",
+                        "inverse-on-surface": "#313030",
+                        "primary-container": "#800020",
+                        "on-secondary-container": "#342800",
+                        "secondary-container": "#af8d11",
+                        "secondary": "#e9c349",
+                        "on-tertiary-fixed": "#1b1d0e",
+                        "outline-variant": "#584141",
+                        "surface-variant": "#353534",
+                        "on-background": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-fixed": "#241a00",
+                        "on-error": "#690005",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-primary-fixed-variant": "#8e0f28",
+                        "surface-bright": "#393939",
+                        "tertiary-fixed-dim": "#c8c8b0",
+                        "primary-fixed": "#ffdada",
+                        "surface-dim": "#131313",
+                        "on-surface-variant": "#e0bfbf",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-tint": "#ffb3b5",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-tertiary": "#303221"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max-width": "1200px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "title-lg": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "label-sm": ["Montserrat"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "700" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Montserrat', sans-serif;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+        
+        /* Typography Scale Application */
+        .font-display-lg { font-family: 'Playfair Display', serif; font-size: 56px; line-height: 64px; letter-spacing: -0.02em; font-weight: 700; }
+        .font-headline-lg { font-family: 'Playfair Display', serif; font-size: 40px; line-height: 48px; font-weight: 700; }
+        .font-headline-lg-mobile { font-family: 'Playfair Display', serif; font-size: 32px; line-height: 40px; font-weight: 700; }
+        .font-headline-md { font-family: 'Playfair Display', serif; font-size: 28px; line-height: 36px; font-weight: 600; }
+        .font-title-lg { font-family: 'Montserrat', sans-serif; font-size: 20px; line-height: 28px; letter-spacing: 0.01em; font-weight: 600; }
+        .font-body-lg { font-family: 'Montserrat', sans-serif; font-size: 18px; line-height: 28px; font-weight: 400; }
+        .font-body-md { font-family: 'Montserrat', sans-serif; font-size: 16px; line-height: 24px; font-weight: 400; }
+        .font-label-md { font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 20px; letter-spacing: 0.08em; font-weight: 600; text-transform: uppercase; }
+        .font-label-sm { font-family: 'Montserrat', sans-serif; font-size: 12px; line-height: 16px; font-weight: 500; }
+
+        /* Button Styles */
+        .btn-primary {
+            @apply inline-flex items-center justify-center bg-primary-container text-[#F5F5DC] font-label-md px-6 py-3 rounded uppercase transition-all duration-300;
+        }
+        .btn-primary:hover {
+            @apply brightness-110 scale-[1.02];
+        }
+        .btn-secondary {
+            @apply inline-flex items-center justify-center bg-transparent border border-secondary text-secondary font-label-md px-6 py-3 rounded uppercase transition-all duration-300;
+        }
+        .btn-secondary:hover {
+            @apply bg-secondary/10;
+        }
+
+        /* Card Hover Effects */
+        .menu-card {
+            @apply bg-surface-container transition-all duration-500 overflow-hidden relative border border-outline-variant/30;
+        }
+        .menu-card:hover {
+            @apply bg-surface-container-high border-secondary/50;
+        }
+        .menu-card img {
+            @apply transition-transform duration-700 ease-out;
+        }
+        .menu-card:hover img {
+            @apply scale-105;
+        }
+
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary-container selection:text-white">
+<!-- Header / TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 shadow-md transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2" href="#">
+<img alt="Carbonara's Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApgBoX_V9eHOxfxFBoxcuz1aoLCPkB0ZSHJXP5CwZKULhb1oF35pnaalWMHapmS9HnHOaD7kFuZQbkSFYWrnV-151-AwlOh1bCyJ_CzlK7XyT17EG0XENyFGZ7bm-NaPQ-Zbf8C-tcicn0inZUbLAWFpAyx32xyPW8rM9Q8U23GrrAi2ioz8PEEDvc9h-J44IdyV7dRd8aAkm_N7Gn5UYS_iJtU3e3T94-OTzJDamCX6CX4wwTw1coN2utIiN1NC77dg"/>
+<span class="font-headline-md text-primary hidden sm:block tracking-widest uppercase">Carbonara's</span>
+</a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-label-md" href="#inicio">Inicio</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300 font-label-md" href="#menu">Menú</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300 font-label-md" href="#nosotros">Nosotros</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300 font-label-md" href="#galeria">Galería</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300 font-label-md" href="#ubicacion">Ubicación</a>
+<a class="text-on-surface hover:text-secondary transition-colors duration-300 font-label-md" href="#contacto">Contacto</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<a class="btn-primary hidden sm:inline-flex gap-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+                    Ordenar
+                </a>
+<button class="md:hidden text-on-surface p-2 focus:outline-none">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen min-h-[600px] flex items-center justify-center mt-16 md:mt-0" id="inicio">
+<!-- Background Image -->
+<div class="absolute inset-0 w-full h-full">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A cinematic, ultra-high definition close-up of a rustic, artisan wood-fired pizza freshly pulled from a traditional brick oven. The pizza features a perfectly blistered, charred crust with bubbling golden mozzarella, vibrant red San Marzano tomato sauce, and fresh green basil leaves. The lighting is warm and dramatic, resembling firelight, casting deep shadows that emphasize the rich textures of the ingredients and the rustic dark charcoal setting of a premium Italian pizzeria." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjri0zxtftZW2YZj-gAq9vYyoa21vc7FjBxX2g1aiQLpREVxjW47MX4W3e0yu7VeLvjFAVb7BepfYj9jP9hROnF_NKVkZp9hSVg87Fp0Kovio2ayA7QRsK42wc489POuRjgGkq7AAnjO2kky8sM0KXhA1YdxtzAy7cNtTBEJsXq02n1LqpWEKWDiel3-K6Ffl6Ru9mWGXVW-jB7j_CZ3UleRJsLWwS72aqLHGA-l2Mhz5n12TewKKC"/>
+</div>
+<div class="relative z-20 text-center px-4 max-w-4xl mx-auto mt-20">
+<span class="font-label-md text-secondary tracking-[0.2em] mb-4 block uppercase">Tradición e Ingredientes Frescos</span>
+<h1 class="font-display-lg text-on-background mb-8 leading-tight">Sabor artesanal, horneado con fuego real</h1>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">Disfruta de la auténtica experiencia culinaria con nuestras pizzas de masa madre, pastas caseras y cortes al grill, todo preparado con pasión y los mejores ingredientes.</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="btn-primary w-full sm:w-auto" href="#menu">Ver el menú</a>
+<a class="btn-secondary w-full sm:w-auto flex gap-2" href="#">
+<span class="material-symbols-outlined">send</span>
+                    Pedir por WhatsApp
+                </a>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce hidden md:block">
+<a class="text-on-surface/50 hover:text-secondary transition-colors" href="#menu">
+<span class="material-symbols-outlined text-4xl">keyboard_arrow_down</span>
+</a>
+</div>
+</section>
+<!-- Menu Section (Categorized) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface relative" id="menu">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<span class="font-label-md text-secondary uppercase tracking-widest block mb-2">Nuestra Selección</span>
+<h2 class="font-headline-lg text-on-background">Menú Principal</h2>
+<div class="w-24 h-1 bg-primary-container mx-auto mt-6"></div>
+</div>
+<!-- Pizzas Category -->
+<div class="mb-20">
+<div class="flex items-center gap-4 mb-10 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-secondary text-4xl" style="font-variation-settings: 'FILL' 1;">local_pizza</span>
+<h3 class="font-headline-md text-on-background m-0">Pizzas 14"</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Capresse -->
+<div class="menu-card rounded flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A top-down, high-contrast, premium food photograph of a 14-inch artisanal Caprese pizza. The dark, charcoal-toned rustic table serves as the background. The pizza boasts a perfectly imperfect, charred crust edge. It is generously topped with creamy white circles of fresh mozzarella, vibrant red sliced tomatoes, and a drizzle of rich, dark green basil pesto, creating a striking contrast against the dark setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUlRg04nlvRC2dxV4zj3_tibZ7K2aTuOEhGYzVaPBrHc-9wkkW6Yw4udGb1wjk2sLPHtYAqfYwh5ngBEA-5M96p38sZbleXDXxd9LzNB2uEB-zNdU-S4venCqcMa-k4HKuTZ1AMbsyBL35-H_UZ-f12xQdNGJzrcc30Ql-0SsLuPL45ugNBEqOTOsvS_WBPGsYvQI6QTf6dAsUddeNXZrNVG-u7MK27e5Q4627-zJwKt3y2Dz9aax0"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h4 class="font-title-lg text-on-background">Capresse</h4>
+<span class="font-label-md text-secondary ml-4 whitespace-nowrap">$220</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow">Tomate fresco, mozzarella de búfala, albahaca y un toque de pesto casero sobre nuestra salsa pomodoro.</p>
+<button class="mt-4 text-primary font-label-sm uppercase hover:text-secondary transition-colors text-left flex items-center gap-1">Agregar <span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+</div>
+<!-- Blanca -->
+<div class="menu-card rounded flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A moody, elegant food shot of a Blanca pizza featuring high-quality prosciutto (jamón serrano) draped elegantly over a white cheese base. A generous mound of fresh, peppery green arugula sits in the center. The pizza rests on a dark wooden board, illuminated by soft, directional lighting that highlights the glistening fat of the prosciutto and the charred blisters of the wood-fired dough." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuBqKDlJJMCr9HA6v1lnDslXFpbOFnhF5KsqcL_2RZHHJnZYvzsdvRMPMC0wJqxozyLK9LWxxBIG-f8LhqY6cnjd2PySOQ_BP5d6jjtq85XDx7AIxubpiQvzVcCZg0-hFHkbqgtNy8l_Bx6kj27JdXkpPM3dulOzcjoyFOgVhPkZ52l6rbcdoRKJsGeK3-h9pxEAZ9_qpoIftA9pz0cn-ecSq9lDfEn7KlJ5kN9_7Vsg3Rc3J2gWXY"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h4 class="font-title-lg text-on-background">Blanca</h4>
+<span class="font-label-md text-secondary ml-4 whitespace-nowrap">$240</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow">Base blanca de quesos, finas láminas de jamón serrano y rúcula fresca añadida al salir del horno.</p>
+<button class="mt-4 text-primary font-label-sm uppercase hover:text-secondary transition-colors text-left flex items-center gap-1">Agregar <span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+</div>
+<!-- Boloñesa -->
+<div class="menu-card rounded flex flex-col h-full">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A rich, appetizing close-up of a Bolognese pizza on a rustic dark surface. The pizza is loaded with a thick, hearty meat sauce (Boloñesa), melted mozzarella, and sprinkled with fresh herbs. The warm, inviting lighting accentuates the savory, meaty texture of the sauce and the melted, stringy cheese over the artisanal crust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5KZP_s14jHWyeO3h-DIPe5chyxvebJZnZfzyPmwQIo652Xhd_bLP4_HLvuIjjAwBsYhllabzH3uscvz7iroBtXS0KgJbKZV1AZPuGVyta0Zv4y63LjvoWmY4OEsoDfEfRrdjBa8iWunDuMgr-wSh3Yz-C5fQgq1E6c4HH5hw1ufgXZqBGIkbhpdxuGgtHvRDFjilZFT4BAKUAC7C9kEaOBPZYwcdO52SVFg64mrKq_LAv1GwauwKB"/>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-3">
+<h4 class="font-title-lg text-on-background">Boloñesa</h4>
+<span class="font-label-md text-secondary ml-4 whitespace-nowrap">$230</span>
+</div>
+<p class="font-body-md text-on-surface-variant flex-grow">Nuestra clásica salsa de carne boloñesa horneada a fuego lento, con extra mozzarella.</p>
+<button class="mt-4 text-primary font-label-sm uppercase hover:text-secondary transition-colors text-left flex items-center gap-1">Agregar <span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Other Categories (Grid Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Hamburguesas & Alitas -->
+<div class="space-y-12">
+<div>
+<div class="flex items-center gap-4 mb-6 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">lunch_dining</span>
+<h3 class="font-headline-md text-on-background m-0">Hamburguesas</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start border-b border-outline-variant/10 pb-4 hover:bg-surface-container/50 p-2 transition-colors rounded">
+<div class="pr-4">
+<h4 class="font-title-lg text-on-background mb-1">Clásica</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Carne de res premium, queso, tocino crujiente, y cebolla caramelizada en pan brioche.</p>
+</div>
+<span class="font-label-md text-secondary whitespace-nowrap mt-1">$180</span>
+</div>
+<div class="flex justify-between items-start border-b border-outline-variant/10 pb-4 hover:bg-surface-container/50 p-2 transition-colors rounded">
+<div class="pr-4">
+<h4 class="font-title-lg text-on-background mb-1">Pollo Crujiente</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Pechuga empanizada, queso cheddar fundido, lechuga y aderezo especial.</p>
+</div>
+<span class="font-label-md text-secondary whitespace-nowrap mt-1">$160</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<h3 class="font-headline-md text-on-background m-0">Alitas &amp; Boneless</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start hover:bg-surface-container/50 p-2 transition-colors rounded">
+<div class="pr-4">
+<h4 class="font-title-lg text-on-background mb-1">Orden Tradicional (10 pz)</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Acompañadas de papas fritas, aderezo ranch, apio y salsa BBQ.</p>
+</div>
+<span class="font-label-md text-secondary whitespace-nowrap mt-1">$190</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Pastas & Entradas -->
+<div class="space-y-12">
+<div>
+<div class="flex items-center gap-4 mb-6 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">ramen_dining</span>
+<h3 class="font-headline-md text-on-background m-0">Pastas</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start border-b border-outline-variant/10 pb-4 hover:bg-surface-container/50 p-2 transition-colors rounded">
+<div class="pr-4">
+<h4 class="font-title-lg text-on-background mb-1">Lasagna Boloñesa</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Nuestra receta familiar. Capas de pasta fresca, salsa boloñesa, bechamel y queso gratinado al horno de leña.</p>
+</div>
+<span class="font-label-md text-secondary whitespace-nowrap mt-1">$210</span>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-4 mb-6 border-b border-outline-variant/30 pb-4">
+<span class="material-symbols-outlined text-secondary text-3xl" style="font-variation-settings: 'FILL' 1;">tapas</span>
+<h3 class="font-headline-md text-on-background m-0">Entradas</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start hover:bg-surface-container/50 p-2 transition-colors rounded">
+<div class="pr-4">
+<h4 class="font-title-lg text-on-background mb-1">Pan de Ajo</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Pan artesanal tostado con mantequilla de ajo, hierbas finas y queso mozzarella gratinado.</p>
+</div>
+<span class="font-label-md text-secondary whitespace-nowrap mt-1">$90</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a class="btn-primary" href="#">Descargar Menú Completo (PDF)</a>
+</div>
+</div>
+</section>
+<!-- About Us / Nosotros -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline-variant/20" id="nosotros">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2">
+<span class="font-label-md text-secondary uppercase tracking-widest block mb-4">Nuestra Historia</span>
+<h2 class="font-headline-lg text-on-background mb-6">Cocina con Corazón, Horneada con Fuego</h2>
+<p class="font-body-md text-on-surface-variant mb-6">
+                    En Carbonara's, creemos que la verdadera magia ocurre cuando se combinan ingredientes frescos, técnica artesanal y el calor reconfortante del fuego real. Nuestro horno de leña es el alma de nuestra cocina, aportando ese característico sabor ahumado y texturas inigualables a cada platillo.
+                </p>
+<p class="font-body-md text-on-surface-variant mb-8">
+                    Desde nuestras masas que reposan pacientemente para desarrollar su sabor, hasta las salsas que burbujean lentamente, cada detalle es cuidado para ofrecerte una experiencia culinaria auténtica, rústica y elegante a la vez.
+                </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span class="font-label-sm text-on-surface">Ingredientes Frescos</span>
+</div>
+<div class="h-12 w-px bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">fireplace</span>
+<span class="font-label-sm text-on-surface">Horno de Leña</span>
+</div>
+<div class="h-12 w-px bg-outline-variant/30"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<span class="font-label-sm text-on-surface">Proceso Artesanal</span>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 relative">
+<div class="absolute inset-0 bg-primary-container/20 rounded-lg transform translate-x-4 translate-y-4"></div>
+<img class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[500px]" data-alt="A cinematic photograph capturing the glowing interior of a traditional brick wood-fired pizza oven. Intense, bright orange flames lick the curved dome ceiling, illuminating the dark soot-stained bricks. Inside, a rustic artisanal pizza is baking, its crust beginning to puff and char. The scene conveys warmth, tradition, and the intense heat essential for authentic culinary craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFiJV7uZOuldRjAxIWo3OK2kbE417cvgk8G3Z1Lgdenn1NTcxOlgzORFseIXztJNU9_f7b-QKC5UATD754f3j8e8lAAYGFD7tjeLRyZd2u6MlmYzxFQfiiZBn4KmvrQFD2wKWbJKlj7RbNixQZrcx_JUg9KKSnN4eDemPTapIwYCukABgN5UeKCqnC-vOBeVKPhi2K1jjSQlU4agpC3LGfl2260B5Tj-rskEFur3Ct3WTFqnNJ8KHN"/>
+</div>
+</div>
+</section>
+<!-- Gallery Section (Bento Grid) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface" id="galeria">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-on-background">De Nuestra Cocina</h2>
+<div class="w-24 h-1 bg-secondary mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+<!-- Large Featured Image -->
+<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded group relative">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors z-10 duration-500"></div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dramatic overhead view of a massive, heavily loaded artisanal pizza being sliced on a dark slate cutting board. Rich, dark lighting accentuates the steam rising from the hot cheese, the vibrant colors of fresh vegetables, and the savory meats. The mood is highly appetizing and deeply textured, perfect for a premium dark-mode restaurant aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpFCIsCcG5E7RWQX7mmGB2RwYob_NrDDU0bQaJzIGuXxSFzK4ol-ih25Ya3J0YnLxH9dynIrtMA4c6NKdUaLqH4dqqmYea29vfPY_osAcKCG2pb6WrLUGNlEHU1WLgnjpYvVIIxZ_N1gXEkvH4poydzCVjWSFOYZApkoFyoUo38vU2XJIpYOFkwKcrvDzxbYoybhqxJnt_DOu1p54S-3MafWiI7RQmKIlGoysWv2C0YNMdO-9F9Zlu"/>
+</div>
+<!-- Small Images -->
+<div class="overflow-hidden rounded group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up shot of a bubbling hot, incredibly cheesy lasagna straight from the oven, served in a rustic cast-iron skillet resting on a dark wooden table. The golden-brown crusty edges of the cheese contrast beautifully with the rich red bolognese sauce seeping from the layers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXppwxHNqXP5iheVdGu0iUMjReGr4cMs5B1YZfVFL78FCQOnhEuF9XBd3jERz_qZG_hP8NRgEAyQuOKM9W0Kn-6iNG5h6XfG25_q8LvSwgivKnceeL0oO9y1FD7mvp9elK3LFZLQudDSQEjnS59uHeQ9OB5XlRxMQNWZ4UZMowzchsd72jL-o_dpzb-zeWG7D8M58tuVUe02489fsUOl-HJPuGugH3c9ez5DrAyRXTzDeDTeKpFdte"/>
+</div>
+<div class="overflow-hidden rounded group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A tall, gourmet artisan hamburger stacked high with premium beef, dripping melted cheddar cheese, crispy bacon, and fresh greens, served on a dark slate plate with a side of perfectly golden, thick-cut french fries. Dark, moody background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2wbVwboD2G-g6wQUYJxhLeP2FziRMzAtUkT0ZHpjZKvY_mnyG00Oe86_CVlPY0Ip9xpZPuEuudNpTkb-C7d1Lu3aIpcI_5x3eppy8Mxy5HmKzkDxDnvw5MQTgghEGOJr4yGNgRt-hEehydUzwfVwB8PB0YS8Pf9e1j8lKO88ui6ZwTV56mE2AuMAckX8Nswncha_ZSN-VCMi8yy97v-wyhGkjj8QZBPlqOxp43L3M9BLpdgjbkfAy"/>
+</div>
+<!-- Medium Image Wide -->
+<div class="md:col-span-2 overflow-hidden rounded group relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A row of crispy, golden-fried chicken wings (alitas) generously coated in a dark, glossy BBQ sauce, resting on a sheet of butcher paper over a charred wood table. Small bowls of creamy ranch dressing and fresh celery sticks accompany them, illuminated by warm, directional light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkB3fxJ7rcZR5l2SnsrLlGu1oyU027eP__k1UD1CV9_U23tYUJogJnqq94NF1G8tg2lFDhYORly6jXyUCdso8BZWupCUCvchABZwP9HEzM10cNeLLkWm4PPgX_EIf2wuw8lOMfsLAKugvr14Kt28JOorhvdSStc3rpgfzNvFLuOlHFjG1zKHjnVTG6a-kYbfkOzSKE62ioaOMH9Q7hJ22CJQfAviFnayoDSUCnnKghLf7fG2Du4yJC"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Contact -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline-variant/20" id="ubicacion">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row gap-12 bg-surface rounded-xl overflow-hidden shadow-2xl border border-outline-variant/30">
+<!-- Information Panel -->
+<div class="md:w-1/3 p-10 flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-on-background mb-8 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                        Encuéntranos
+                    </h3>
+<div class="space-y-6">
+<div>
+<span class="font-label-md text-secondary block mb-1">Dirección</span>
+<p class="font-body-md text-on-surface">Av. Principal #123, Col. Centro<br/>Ciudad, Estado 45000</p>
+</div>
+<div>
+<span class="font-label-md text-secondary block mb-1">Horarios</span>
+<ul class="font-body-md text-on-surface space-y-1">
+<li class="flex justify-between"><span>Lunes - Jueves:</span> <span>1:00 PM - 10:00 PM</span></li>
+<li class="flex justify-between"><span>Viernes - Sábado:</span> <span>1:00 PM - 11:30 PM</span></li>
+<li class="flex justify-between"><span>Domingo:</span> <span>1:00 PM - 9:00 PM</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<p class="font-body-md text-on-surface-variant mb-4">¿Listo para hacer tu pedido o reservar?</p>
+<a class="btn-primary w-full flex gap-2 justify-center" href="#">
+<span class="material-symbols-outlined">send</span>
+                        Contactar por WhatsApp
+                    </a>
+</div>
+</div>
+<!-- Map Area -->
+<div class="md:w-2/3 min-h-[400px] relative bg-surface-container-highest">
+<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant">
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl mb-4 opacity-50">map</span>
+<p class="font-label-md uppercase tracking-widest">Mapa Interactivo</p>
+</div>
+</div>
+<!-- Placeholder for actual embedded map, styling applied over it for aesthetic blending -->
+<img class="w-full h-full object-cover mix-blend-luminosity opacity-40" data-alt="A stylized, dark-mode satellite map view focusing on a downtown city grid. The streets are depicted in deep charcoal and muted grey tones, with a distinct, glowing red pin marker indicating a restaurant location in the center. The aesthetic matches the dark, premium UI of the website." data-location="Ciudad" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXy3_oc5tAG1eJQPeSZOWySGJDrzgg_z_d5f1sbSciqOt-dBuDJveK1Z1GXj3wSg4ozXR1SJrmtwSCTAR_Az4cKd6x6Aw2Dvg-EzfsuCqtkx6sqiB3FvCLNZR-CvicFCx_1Q-vaxghXLr1eTnDAgj8PQyJ4nUSBj4u22ozmoiP4_lQ7BZGB2di8jWo0hfNGHbyh1W-Fq9UDroCo-PtqroNC8tvi_T8WsShow0pp5bZ_RRbJAefEVx5"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-unit*8 bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-primary-container/20 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row justify-between items-center gap-unit*4 md:gap-8">
+<div class="flex flex-col items-center md:items-start gap-4">
+<a class="flex items-center gap-2 opacity-80 hover:opacity-100 transition-opacity" href="#">
+<img alt="Carbonara's Logo" class="h-10 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb_OtWVJnIxKoT-1rKWCZckB3uVs1LHiC83P8yjuoaZh5GYd_JQn404ktEgFEbjuKoLZvYIMffp_HULcy5nE7jAAEIoPae5JeiPGGnPAHcF8FGhk4_-C6WnbVP6WXP0lgTDwccUDynSoBCU_lchO1DGL8o5vgiLW9FCiSvAdiXbq0jhJlilSaEpNnC63mbaekGADbvp7gBxy-YbO6ln5dIv-CHGcf_YxuIQCzZSuzwGOF4UIL7E6kf8gFjj1f4U-uRuw"/>
+<span class="font-headline-sm text-headline-sm text-primary dark:text-primary">CARBONARA'S</span>
+</a>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Carbonara's - Sabor Artesanal. All rights reserved.</p>
+</div>
+<div class="flex flex-col md:flex-row items-center gap-6 md:gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-secondary underline hover:text-primary transition-colors" href="#contacto">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined">thumb_up</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- Simple Script for Navbar Background Change on Scroll -->
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'bg-surface/95');
+                nav.classList.remove('bg-surface/90');
+            } else {
+                nav.classList.add('bg-surface/90');
+                nav.classList.remove('shadow-lg', 'bg-surface/95');
+            }
+        });
+    </script>
+</body></html>
